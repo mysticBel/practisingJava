@@ -1,8 +1,10 @@
 package collections;
 
+import java.util.List;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.stream.Collectors;
 
 public class Example4_OrderingCollection {
     public static void main(String[] args) {
@@ -17,8 +19,16 @@ public class Example4_OrderingCollection {
         subjects.add(subject3);
         subjects.add(subject4);
 
-        subjects.sort(Comparator.comparing(Subject::getName));
-        System.out.println(subjects); // [Java, JavaScript, Python, SQL]
+        /*subjects.sort(Comparator.comparing(Subject::getName));
+        System.out.println(subjects); */
 
+        Collections.sort(subjects, Comparator.comparing(Subject::getName));
+        System.out.println(subjects); // [Java, JavaScript, Python, SQL]
+        Collections.sort(subjects, Comparator.comparing(Subject::getName).reversed());
+        System.out.println(subjects); // [SQL, Python, JavaScript, Java]
+
+        //Stream() - Ordering excluding Javascript
+        List<Subject> subjectlist = subjects.stream().filter(subject -> !subject.getName().equalsIgnoreCase("JavaScript")).sorted(Comparator.comparing(Subject::getName).reversed()).collect(Collectors.toList());
+        System.out.println(subjectlist); //[SQL, Python, Java]
     }
 }
