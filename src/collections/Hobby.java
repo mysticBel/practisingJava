@@ -1,4 +1,4 @@
-package collectionsExamples;
+package collections;
 
 public class Hobby {
     private String name;
