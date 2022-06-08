@@ -18,7 +18,7 @@ public class Example4_OrderingCollection {
         subjects.add(subject4);
 
         subjects.sort(Comparator.comparing(Subject::getName));
-        System.out.println(subjects); // [Java, JavaScript, Python, SQL] after comparateTo()
+        System.out.println(subjects); // [Java, JavaScript, Python, SQL]
 
     }
 }
