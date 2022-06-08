@@ -16,8 +16,8 @@ public class Example4_OrderingCollection {
         subjects.add(subject3);
         subjects.add(subject4);
 
-        Collections.sort(subjects);    // an error appears. Need to implement Comparable (java.lang.Comparable)
-        System.out.println(subjects);
+        Collections.sort(subjects);
+        System.out.println(subjects); // [Java, JavaScript, Python, SQL] after comparateTo()
 
     }
 }
