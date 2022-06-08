@@ -2,7 +2,7 @@ package collectionsExamples;
 
 import java.util.ArrayList;
 
-public class Example1 {
+public class Example1_ReadingLists {
     public static void main(String[] args) {
         String variable1 = "Ejem 1";
         String variable2 = "Ejem 2";

@@ -6,7 +6,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Example2 {
+public class Example2_OrderingLists {
     public static void main(String[] args) {
         String curso1 = "Magic 101";
         String curso2 = "Programming";
@@ -29,7 +29,7 @@ public class Example2 {
         Collections.sort(listaCursos, Collections.reverseOrder());
         System.out.println(listaCursos); //[Programming, Mindset, Magic 101, Art & Crafts]
 
-        // ahora usando el metodo sort y Comparator(java.utils)
+        // ahora usando el metodo sort y Comparator(java.util)
         listaCursos.sort(Comparator.naturalOrder());
         System.out.println(listaCursos); //[Art & Crafts, Magic 101, Mindset, Programming]
         listaCursos.sort(Comparator.reverseOrder());
