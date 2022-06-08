@@ -1,6 +1,6 @@
 package collections;
 
-public class Subject implements Comparable<Subject>{
+public class Subject {
     private String name;
     private int time;
 
@@ -31,8 +31,5 @@ public class Subject implements Comparable<Subject>{
         return this.name;
     }
 
-    @Override
-    public int compareTo(Subject o) {
-        return this.name.compareTo(o.getName());
-    }
+
 }

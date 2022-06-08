@@ -2,6 +2,7 @@ package collections;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 
 public class Example4_OrderingCollection {
     public static void main(String[] args) {
@@ -16,7 +17,7 @@ public class Example4_OrderingCollection {
         subjects.add(subject3);
         subjects.add(subject4);
 
-        Collections.sort(subjects);
+        subjects.sort(Comparator.comparing(Subject::getName));
         System.out.println(subjects); // [Java, JavaScript, Python, SQL] after comparateTo()
 
     }
